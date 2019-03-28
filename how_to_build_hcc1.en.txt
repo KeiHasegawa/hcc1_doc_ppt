@@ -1,0 +1,55 @@
+(1) Install Cygwin. Add to bellow package.
+
+    flex
+    bison
+    perl
+    g++
+    tcsh
+    make
+
+(2) Set environment variable `CYGWINDIR' to the install folder.
+    Ex: CYGWINDIR=C:\cygwin64
+
+(3) Download hcc1_src.tar.bz2
+
+(4) Extract it
+
+   % bunzip2 -c hcc1_src.tar.bz2 | tar xf -
+
+(5) Open 20_hcc1/src/hcc1.sln with Visual Studio 2017 and build as usual.
+
+   (*) If the error about Windows SDK version occurs, please do as
+       error message approach, i.e. select [solution re-target].
+    
+(6) Simple comfirmation
+
+    % cat sample.txt
+    float f(int a, int b)
+    {
+    	return (double)a + b;
+    }
+    % x64/Debug/hcc1.exe --lang eng --no-generator --output-medium --simple-medium sample.txt
+    f:
+    	t0 := (double)a
+    	t1 := (double)b
+    	t2 := t0 + t1
+    	t3 := (float)t2
+    	return t3
+    
+    float f(int,int)
+          int a
+          int b
+                  double t0
+    	          double t1
+    	          double t2
+    	          float t3
+    % 
+
+    If you want to execute from Visual Studio 2017 debugger, specify arguments
+
+    --lang eng --no-generator --output-medium --simple-medium sample.txt
+
+(7) Build with g++:
+
+    % cd 20_hcc1/src
+    % make

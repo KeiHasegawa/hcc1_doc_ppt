@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>C Compiler</title>
+
+
+<style type="text/css"> 
+<!--
+
+body {
+background:#f5f5f5;
+margin: 0;
+padding: 0;
+}
+
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,p,blockquote,fieldset,div {
+margin: 0;
+padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-size: 100%;
+font-weight: normal;
+}
+
+ul li, ol li {
+list-style: none;
+}
+
+table {
+margin: 0;
+padding: 0;
+border-collapse: collapse;
+border-spacing: 0;
+font-size: 100%;
+}
+
+caption {
+text-align: left;
+}
+
+table,pre,code,select,input,textarea,kbd,var,ins,del,samp {
+font-size: 100%;
+}
+
+address,cite,dfn,em,strong,var,th,ins,del,samp {
+font-weight: normal;
+font-style: normal;
+}
+
+a img {
+border: 0;
+}
+
+fieldset {
+border: none;
+}
+
+.userDefaultWrapper .userDefaultContents{
+width:850px;
+padding:20px;
+margin:20px auto;
+color:#262626;
+background:#fff;
+border-radius:3px;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+-webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.15);
+box-shadow: 0 0 3px 0 rgba(0,0,0,0.15);
+}
+
+.userDefaultWrapper .userDefaultContents .userDefaultMainVisual{
+margin-bottom:20px;
+line-height:0;
+}
+
+.userDefaultWrapper .userDefaultContents h1.userDefaultHdrTxt{
+margin-bottom:20px;
+text-align:center;
+font-size:200%;
+font-weight:bold;
+}
+
+.userDefaultWrapper .userDefaultContents p.userDefaultLeadTxt{
+margin-bottom:20px;
+}
+
+.userDefaultWrapper .userDefaultContents .userDefaultLinkTxt{
+padding-top:20px;
+border-top:1px solid #ccc;
+text-decoration:none;
+text-align:center;
+}
+
+.userDefaultWrapper .userDefaultContents .userDefaultLinkTxt a{
+text-decoration:none;
+padding:0 10px;
+border-left:1px solid #ccc;
+}
+
+.userDefaultWrapper .userDefaultContents .userDefaultLinkTxt a:first-child{
+border-left:none;
+}
+
+-->
+</style> 
+</head>
+
+<body>
+
+<div class="userDefaultWrapper">
+<div class="userDefaultContents">
+<h1 class="userDefaultHdrTxt">C Compiler</h1>
+<p class="userDefaultLeadTxt">What we should perform at first is to annihilate the lawyer of the language. - <a href="https://en.wikipedia.org/wiki/Henry_VI,_Part_2">Henry VI, Part 2</p>
+
+  <li><a href="hcc1_src.tar.bz2">hcc1 source files(2019.03.14)(tar.bz2)</a></li>
+  <li><a href="how_to_build_hcc1.en.txt">How to build hcc1</a></li>
+  <li><a href="https://github.com/KeiHasegawa/hcc1">github</a></li>
+  <li><a href="c_compiler_e.pdf">Document(2019.03.14)(PDF)</a></li>
+  <li><a href="doc.tar.bz2">Document source files(2019.03.14)(tar.bz2)</a></li>
+  <li><a href="how_to_create_pdf.en.txt">How to create document PDF file</a></li>
+  <li><a href="http://bbs6.sekkaku.net/bbs/hasegawa/">Bulletin board</a></li>
+  <li><a href="00_backend_interface_e.ppt">Interface between frontend and backend(2019.03.08)(ppt)</a></li>
+  <li><a href="01_static_inline_e.ppt">Compiling static or inline function(2018.12.02)(ppt)</a></li>
+  <li><a href="02_inline_algorithm_e.ppt">inline substitution algorithm(2018.12.02)(ppt)</a></li>
+  <li><a href="03_symtab_lookup_install_e.ppt">symbol table lookup & install(2018.09.25)(ppt)</a></li>
+  <li><a href="04_symtab_symplify_e.ppt">Not referenced literal(2018.09.13)(ppt)</a></li>
+  <li><a href="05_compatibility_e.ppt">Type compatibility and pointer operation(2018.10.11)(ppt)</a></li>
+  <li><a href="06_type_tmp_e.ppt">Temporary type(2018.11.01)(ppt)</a></li>
+  <li><a href="c.y">yacc form of C grammer</a></li>
+  <li><a href="c.y">lex form of C lexicograph</a></li>
+  <li><a href="src.6.zip">hcc1 source files which could be built with VC++6.0 but not maintenanced later(zip)</a></li>
+  <li><a href="../intel/intel_src.tar.bz2">intel.dll source files(2018.12.05)(tar.bz2)</a></li>
+  <li><a href="../sparc/sparc_src.tar.bz2">sparc.dll source files(2018.12.05)(tar.bz2)</a></li>
+  <li><a href="../ppc/ppc_src.tar.bz2">ppc.dll source files(2018.12.05)(tar.bz2)</a></li>
+  <li><a href="../spu/spu_src.tar.bz2">spu.dll source files(2018.12.05)(tar.bz2)</a></li>
+  <li><a href="../tacsim/tacsim_src.tar.bz2">tacsim.dll source files(2018.12.05)(tar.bz2)</a></li>
+  <li><a href="../printf_chk/printf_chk_src.tar.bz2">printf_chk.dll source files(2018.12.05)(tar.bz2)</a></li>
+  <li><a href="how_to_build_backend.en.txt">How to build backend (ex tacsim)</a></li>
+  <li><a href="index.html">Japanese</a></li>
+  <li><a href="http://khasegawa.html.xdomain.jp/index_e.html">Top</a></li>
+
+</div>
+</div>
+</body>
+</html>

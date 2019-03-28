@@ -1,0 +1,73 @@
+(1) cygwin をインストールする。以下の追加パッケージが必要です。
+
+    flex
+    bison
+    perl
+    g++
+    tcsh
+    make
+
+(2) 環境変数 CYGWINDIR をインストールしたフォルダにセットします。
+    例 CYGWINDIR=C:\cygwin64
+
+(3) hcc1_src.tar.bz2 をダウンロードする。
+
+(4) 解凍する。
+
+   % bunzip2 -c hcc1_src.tar.bz2 | tar xf -
+
+(5) 20_hcc1/src というフォルダが作成されるのでそこにある hcc1.sln を
+    Visual Studio 2017 で開いてあとは通常通りビルドします。
+
+   (*) Windows SDK のバージョンに関するエラーが出た場合は、エラーメッセージの通り
+      [ソリューションの再ターゲット] を選択することでエラーを回避できます。
+    
+(6) 簡単な動作確認は以下のようにします。
+
+    % cat sample.txt
+    float f(int a, int b)
+    {
+    	return (double)a + b;
+    }
+    % x64/Debug/hcc1.exe --no-generator --output-medium --simple-medium sample.txt
+    f:
+    	t0 := (double)a
+    	t1 := (double)b
+    	t2 := t0 + t1
+    	t3 := (float)t2
+    	return t3
+    
+    float f(int,int)
+          int a
+          int b
+                double t0
+    	        double t1
+    	        double t2
+    	        float t3
+    % 
+
+    Visual Studio 2017 のデバッガから実行する場合も
+
+    --no-generator --output-medium --simple-medium sample.txt
+
+    の引数を指定すればいいです。
+    ソースファイルを現状 Shift JIS で記述しています。エラーメッセージ、警告メッセージ
+    が文字化けしてしまう場合は、下記のように --lang eng オプションを使用してください。
+
+    % x64/Debug/hcc1.exe --lang eng --no-generator --output-medium --simple-medium sample.txt
+
+(7) g++ でビルドする場合は
+
+    sjis2euc.exe
+    euc2utf.exe
+
+    が必要になるかもしれません。これらは
+
+    トップ -> テストとツール -> テストで使われる C++ プログラム
+
+    を解凍、ビルドすることで作成できます。PATH が通っているディレクトリに置いたら
+
+    % cd 20_hcc/src
+    % make
+
+    とすることでビルドできます。
