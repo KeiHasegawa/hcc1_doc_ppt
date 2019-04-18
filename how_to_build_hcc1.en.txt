@@ -16,7 +16,7 @@
 
    % bunzip2 -c hcc1_src.tar.bz2 | tar xf -
 
-(5) Open 20_hcc1/src/hcc1.sln with Visual Studio 2017 and build as usual.
+(5) Open 20_hcc1/src/hcc1.sln with Visual Studio and build as usual.
 
    (*) If the error about Windows SDK version occurs, please do as
        error message approach, i.e. select [solution re-target].
