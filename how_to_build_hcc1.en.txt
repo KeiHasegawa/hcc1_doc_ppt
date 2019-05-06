@@ -45,7 +45,7 @@
     	          float t3
     % 
 
-    If you want to execute from Visual Studio 2017 debugger, specify arguments
+    If you want to execute from Visual Studio debugger, specify arguments
 
     --lang eng --no-generator --output-medium --simple-medium sample.txt
 

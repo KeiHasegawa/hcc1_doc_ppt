@@ -46,7 +46,7 @@
     	        float t3
     % 
 
-    Visual Studio 2017 のデバッガから実行する場合も
+    Visual Studio のデバッガから実行する場合も
 
     --no-generator --output-medium --simple-medium sample.txt
 
