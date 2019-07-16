@@ -1,15 +1,12 @@
 (1) Install W32TeX. I assume that you install it into C:\w32tex.
 
-(2) Copy `html.sty' which is published in internet to
-C:\w32tex\share\texmf-dist\tex\latex\html\html.sty
-
-(3) Execute bellow `twice' at folder where you uncompressed doc.tar.bz2
+(2) Execute bellow `twice' at folder where you uncompressed doc.tar.bz2
 > C:\w32tex\bin\platex.exe c_compiler_e.tex
 If you do just once, reference part remains `??'.
 
-(4) Convert dvi file to ps file
+(3) Convert dvi file to ps file
 > C:\w32tex\bin\dvi2ps.exe c_compiler.dvi > c_compiler.ps
 
-(5) Convert ps file to pdf file
+(4) Convert ps file to pdf file
 Open c_compiler_e.ps with GSView and execute Convert menu of File.
 Select pdfwrite at Device and 600 at Resolution, and push Ok.

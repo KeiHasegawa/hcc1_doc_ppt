@@ -1,17 +1,13 @@
 (1) W32TeXをインストールします。以下 C:\w32tex にインストールされたと仮定して説明します。
 
-(2) インターネットで公開されているhtml.sty を
-C:\w32tex\share\texmf-dist\tex\latex\html\html.sty
-にコピーします。
-
-(3) 以下を doc.tar.bz2 を展開したフォルダで2回実行します。
+(2) 以下を doc.tar.bz2 を展開したフォルダで2回実行します。
 > C:\w32tex\bin\platex.exe c_compiler.tex
 2回実行しないと相互参照の部分が??のドキュメントになってしまいます。
 
-(4) dvi ファイル -> ps ファイル
+(3) dvi ファイル -> ps ファイル
 > C:\w32tex\bin\dvi2ps.exe c_compiler.dvi > c_compiler.ps
 
-(5) ps ファイル -> pdf ファイル
+(4) ps ファイル -> pdf ファイル
 GSView で c_compiler.ps を開き、File の Convert メニューを選択します。
 Device で pdfwrite, Resolution で 600 が選択されている状態で Ok を押します。
 
