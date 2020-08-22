@@ -56,7 +56,11 @@
 
     % x64/Debug/hcc1.exe --lang eng --no-generator --output-medium --simple-medium sample.txt
 
-(7) g++ でビルドする場合は
+(7) 実際に動作するプログラムを生成する場合
+
+    トップ -> intel のジェネレータ
+
+(8) g++ でビルドする場合は
 
     sjis2euc.exe
     euc2utf.exe

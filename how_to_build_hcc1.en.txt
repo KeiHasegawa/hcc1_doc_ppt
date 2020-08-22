@@ -49,7 +49,11 @@
 
     --lang eng --no-generator --output-medium --simple-medium sample.txt
 
-(7) Build with g++:
+(7) How to generate program
+
+    Top -> Intel generator
+
+(8) Build with g++:
 
     % cd 20_hcc1/src
     % make
