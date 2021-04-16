@@ -1,11 +1,11 @@
 (1) Install W32TeX. I assume that you install it into C:\w32tex.
 
-(2) Execute bellow `twice' at folder where you uncompressed doc.tar.bz2
+(2) Execute below `twice' at folder where you uncompressed doc.tar.bz2
 > C:\w32tex\bin\platex.exe c_compiler_e.tex
 If you do just once, reference part remains `??'.
 
 (3) Convert dvi file to ps file
-> C:\w32tex\bin\dvi2ps.exe c_compiler.dvi > c_compiler.ps
+> C:\w32tex\bin\dvi2ps.exe c_compiler_e.dvi > c_compiler_e.ps
 
 (4) Convert ps file to pdf file
 Open c_compiler_e.ps with GSView and execute Convert menu of File.

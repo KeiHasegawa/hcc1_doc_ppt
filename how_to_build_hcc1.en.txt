@@ -1,4 +1,4 @@
-(1) Install Cygwin. Add to bellow package.
+(1) Install Cygwin. Add to below package.
 
     flex
     bison

@@ -3,7 +3,7 @@
 
 (2) Download backend source file.
 
-(3) Extract it. The bellow is case of `tacsim.dll'
+(3) Extract it. The below is case of `tacsim.dll'
 
     % bunzip2 -c tacsim_src.tar.bz2 | tar xf -
 
